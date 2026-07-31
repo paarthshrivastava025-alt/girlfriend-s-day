@@ -1,1 +1,1124 @@
+/* =========================================================
+   FOR JOSHITA ❤️
+   PART 1
+========================================================= */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#070B1F;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* --------------------------
+   STARS CANVAS
+--------------------------- */
+
+#stars{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-3;
+
+}
+
+/* --------------------------
+   INTRO
+--------------------------- */
+
+#intro{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.fadeText{
+
+    opacity:0;
+
+    animation:fadeIn 2s forwards;
+
+}
+
+.delay{
+
+    animation-delay:1.5s;
+
+}
+
+.delay2{
+
+    animation-delay:3s;
+
+}
+
+#intro h2{
+
+    font-size:28px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:30px;
+
+}
+
+#intro h1{
+
+    font-size:60px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+}
+
+#intro p{
+
+    font-size:22px;
+
+    color:#dddddd;
+
+    line-height:1.7;
+
+}
+
+#begin{
+
+    margin-top:60px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff6fa9;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(255,111,169,.4);
+
+}
+
+#begin:hover{
+
+    transform:scale(1.07);
+
+    background:#ff87b7;
+
+}
+
+/* --------------------------
+   MAIN PAGE
+--------------------------- */
+
+#mainPage{
+
+    display:none;
+
+    animation:fadePage 1s;
+
+}
+
+nav{
+
+    width:100%;
+
+    padding:35px;
+
+    text-align:center;
+
+    position:sticky;
+
+    top:0;
+
+    backdrop-filter:blur(14px);
+
+    background:rgba(255,255,255,.05);
+
+    z-index:100;
+
+}
+
+nav h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+}
+
+.hero{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:90px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    font-size:26px;
+
+    line-height:1.8;
+
+    color:#dddddd;
+
+}
+
+/* --------------------------
+   GLASS CARD
+--------------------------- */
+
+.glass{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+/* --------------------------
+   COUNTER
+--------------------------- */
+
+.counter{
+
+    text-align:center;
+
+}
+
+.counter h2{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+.counter h3{
+
+    font-size:26px;
+
+    color:#ff8cb9;
+
+    margin-bottom:25px;
+
+}
+
+#timer{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    line-height:1.8;
+
+}
+
+/* --------------------------
+   ANIMATIONS
+--------------------------- */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* --------------------------
+   MOBILE
+--------------------------- */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:56px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+}
+
+#intro h1{
+
+font-size:42px;
+
+}
+
+#intro h2{
+
+font-size:22px;
+
+}
+
+#intro p{
+
+font-size:18px;
+
+}
+
+nav h2{
+
+font-size:26px;
+
+}
+
+#timer{
+
+font-size:28px;
+
+}
+
+}
+/* =========================================================
+   PART 2
+   Gallery • Letter • Buttons • Ending
+========================================================= */
+
+/* --------------------------
+   GALLERY
+--------------------------- */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+width:90%;
+
+max-width:1200px;
+
+margin:80px auto;
+
+}
+
+.photo{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:25px;
+
+padding:18px;
+
+transition:.4s;
+
+overflow:hidden;
+
+animation:floating 6s ease-in-out infinite;
+
+}
+
+.photo:hover{
+
+transform:translateY(-12px) scale(1.03);
+
+box-shadow:0 25px 60px rgba(255,111,169,.25);
+
+}
+
+.photo img{
+
+width:100%;
+
+border-radius:18px;
+
+display:block;
+
+transition:.4s;
+
+}
+
+.photo:hover img{
+
+transform:scale(1.05);
+
+}
+
+.photo p{
+
+margin-top:18px;
+
+text-align:center;
+
+font-size:18px;
+
+color:#f3f3f3;
+
+line-height:1.7;
+
+}
+
+/* --------------------------
+   LETTER
+--------------------------- */
+
+.letter{
+
+margin-top:90px;
+
+margin-bottom:90px;
+
+}
+
+.letter h2{
+
+font-size:42px;
+
+text-align:center;
+
+margin-bottom:35px;
+
+font-family:'Cormorant Garamond',serif;
+
+}
+
+#typing{
+
+font-size:21px;
+
+line-height:2;
+
+color:#ededed;
+
+white-space:pre-wrap;
+
+min-height:260px;
+
+}
+
+/* --------------------------
+   QUESTION
+--------------------------- */
+
+.question{
+
+padding:100px 20px;
+
+text-align:center;
+
+}
+
+.question h2{
+
+font-size:28px;
+
+margin-bottom:25px;
+
+color:#ff9ac4;
+
+}
+
+.question h1{
+
+font-size:55px;
+
+font-family:'Cormorant Garamond',serif;
+
+margin-bottom:50px;
+
+}
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+.buttons button{
+
+padding:18px 42px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:60px;
+
+cursor:pointer;
+
+transition:.35s;
+
+font-weight:600;
+
+}
+
+#yes{
+
+background:#ff6fa9;
+
+color:white;
+
+box-shadow:0 0 30px rgba(255,111,169,.4);
+
+}
+
+#yes:hover{
+
+transform:scale(1.08);
+
+background:#ff87b7;
+
+}
+
+#no{
+
+background:white;
+
+color:#222;
+
+position:relative;
+
+}
+
+#no:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* --------------------------
+   ENDING
+--------------------------- */
+
+#ending{
+
+padding:180px 20px;
+
+text-align:center;
+
+}
+
+#ending h1{
+
+font-size:72px;
+
+font-family:'Cormorant Garamond',serif;
+
+margin-bottom:25px;
+
+animation:floating 5s ease-in-out infinite;
+
+}
+
+#ending h2{
+
+font-size:36px;
+
+color:#ff9ec8;
+
+line-height:1.8;
+
+}
+
+/* --------------------------
+   GLOW EFFECTS
+--------------------------- */
+
+.hero h1{
+
+text-shadow:0 0 25px rgba(255,255,255,.2);
+
+}
+
+.glass:hover{
+
+transform:translateY(-8px);
+
+transition:.4s;
+
+box-shadow:0 25px 60px rgba(255,111,169,.15);
+
+}
+
+button{
+
+font-family:'Inter',sans-serif;
+
+}
+
+img{
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+}
+
+/* --------------------------
+   SCROLLBAR
+--------------------------- */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#050816;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff6fa9;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#ff91be;
+
+}
+
+/* --------------------------
+   MOBILE
+--------------------------- */
+
+@media(max-width:768px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.question h1{
+
+font-size:38px;
+
+}
+
+.letter h2{
+
+font-size:34px;
+
+}
+
+#typing{
+
+font-size:18px;
+
+}
+
+#ending h1{
+
+font-size:46px;
+
+}
+
+#ending h2{
+
+font-size:26px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.buttons button{
+
+width:220px;
+
+}
+
+}
+/* =========================================================
+   PART 3
+   Premium Effects & Final Polish
+========================================================= */
+
+/* Floating Hearts */
+
+.heart{
+
+position:fixed;
+
+width:18px;
+
+height:18px;
+
+background:#ff7cad;
+
+transform:rotate(45deg);
+
+animation:floatHeart 12s linear infinite;
+
+opacity:.6;
+
+z-index:-1;
+
+}
+
+.heart::before,
+.heart::after{
+
+content:"";
+
+position:absolute;
+
+width:18px;
+
+height:18px;
+
+background:#ff7cad;
+
+border-radius:50%;
+
+}
+
+.heart::before{
+
+left:-9px;
+
+}
+
+.heart::after{
+
+top:-9px;
+
+}
+
+/* Glowing Background Orbs */
+
+.orb{
+
+position:fixed;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+opacity:.15;
+
+z-index:-2;
+
+animation:drift 18s ease-in-out infinite;
+
+}
+
+.orb1{
+
+width:350px;
+
+height:350px;
+
+background:#ff5fa2;
+
+top:-120px;
+
+left:-120px;
+
+}
+
+.orb2{
+
+width:300px;
+
+height:300px;
+
+background:#7b8cff;
+
+bottom:-100px;
+
+right:-100px;
+
+animation-delay:5s;
+
+}
+
+.orb3{
+
+width:220px;
+
+height:220px;
+
+background:#9d7dff;
+
+top:40%;
+
+left:60%;
+
+animation-delay:10s;
+
+}
+
+/* Soft Fade Sections */
+
+.hero,
+.counter,
+.gallery,
+.letter,
+.question,
+#ending{
+
+opacity:0;
+
+transform:translateY(50px);
+
+animation:sectionFade 1s forwards;
+
+}
+
+.counter{animation-delay:.2s;}
+.gallery{animation-delay:.4s;}
+.letter{animation-delay:.6s;}
+.question{animation-delay:.8s;}
+#ending{animation-delay:1s;}
+
+/* Image Glow */
+
+.photo img{
+
+box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+}
+
+/* Hero Glow */
+
+.hero h1{
+
+background:linear-gradient(90deg,#ffffff,#ffb7d6,#ffffff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:shine 6s linear infinite;
+
+background-size:300%;
+
+}
+
+/* Button Shine */
+
+.buttons button{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.buttons button::after{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:60%;
+
+height:100%;
+
+background:rgba(255,255,255,.3);
+
+transform:skewX(-20deg);
+
+transition:.7s;
+
+}
+
+.buttons button:hover::after{
+
+left:150%;
+
+}
+
+/* Footer */
+
+footer{
+
+text-align:center;
+
+padding:40px;
+
+color:#888;
+
+font-size:14px;
+
+}
+
+/* Animations */
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(100vh) rotate(45deg);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.6;
+
+}
+
+100%{
+
+transform:translateY(-120px) rotate(405deg);
+
+opacity:0;
+
+}
+
+}
+
+@keyframes drift{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(40px,-40px);
+
+}
+
+100%{
+
+transform:translate(0,0);
+
+}
+
+}
+
+@keyframes sectionFade{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes shine{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:300%;
+
+}
+
+}
+
+/* Better Selection */
+
+::selection{
+
+background:#ff6fa9;
+
+color:white;
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.hero{
+
+padding:90px 20px;
+
+}
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.photo{
+
+padding:12px;
+
+}
+
+.glass{
+
+padding:28px;
+
+}
+
+#timer{
+
+font-size:24px;
+
+}
+
+}
+
+/* End */
