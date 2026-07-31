@@ -23,18 +23,12 @@ const music = new Audio("song.mp3");
 music.loop = true;
 music.volume = 0.5;
 
-// Preload the audio file so it's ready immediately
-music.load();
-
 if (beginBtn) {
     beginBtn.addEventListener("click", () => {
-        // Play music inside the click event handler
-        music.play().then(() => {
-            console.log("Audio playing successfully!");
-        }).catch((err) => {
-            console.log("Audio playback failed: ", err);
-        });
+        // Play music
+        music.play().catch(() => {});
 
+        // Transition intro to main page
         if (intro) intro.style.opacity = "0";
 
         setTimeout(() => {
@@ -46,9 +40,7 @@ if (beginBtn) {
                 behavior: "smooth"
             });
         }, 900);
-    });
-}
-    });
+  });
 }
 
 /* -----------------------
